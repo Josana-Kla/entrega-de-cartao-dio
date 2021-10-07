@@ -4,12 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 1º situação criada: dados do cliente para fazer a entrega de seu cartao
-public class Cliente {
+public class Cliente extends Pessoa {   //23º criei uma nova classe para q essa extenda a criada. Conceito de Herança. E passei os dados que estavam aqui para lá (24º na class Pessoa)
 
-    public Integer codigo;
-    public String nome;
-    public String cpf;
-    
     private  List<Endereco> enderecos;  // 5º coloco assim em vez de colocar public Endereco endereco; public Endereco enderecoTrabalho. E private p proteger meu atributo e o  acesso direto a ele (6º passo na class Endereco)
 
     public void adicionarEndereco(Endereco endereco) { // 13º criei um método, que nao retorna nada, que vai adicionarEndereco e recebe o Endereco (este será chamdo de endereco), para facilitar mais
@@ -31,6 +27,10 @@ public class Cliente {
         return enderecos;
     }
 
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
+
     // 19º quase esqueci, por convenção, no JAVA é obrigatório colocar todos getters and setters, mesmo que seja de atributos que nao façam nada
     public Integer getCodigo() {
         return codigo;
@@ -48,13 +48,6 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
 
     // 2º ah, mas queria cadastrar um outro endereço...
 //    public String endereco2;

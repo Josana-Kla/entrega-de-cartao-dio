@@ -1,6 +1,6 @@
 package poo.model;
 // 4º criei o que tera na classe Endereco
-public class Endereco {
+public class Endereco extends Object {   // toda classe extends Object. Não precisamos colocar como coloquei aqui, pq por padrão isso já acontece
 
     public enum TipoEndereco {  // 6º crio um enum para dizer quais vao ser os tipos de Endereco
         RESIDENCIAL,
